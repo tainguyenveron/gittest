@@ -1,0 +1,752 @@
+# vsim -c "+UVM_VERBOSITY=UVM_HIGH" -voptargs="+acc" -assertdebug -debugDB -l log/base_test.log testbench -wlf waveform/base_test.wlf -do "log -r /*; run -all; quit" "+UVM_TESTNAME=base_test" 
+# Start time: 11:23:06 on Sep 19,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
+# ** Note: (vopt-4301) Memory core inferred for signal 'mem' width=32, depth=32, type=RAM at location ../RTL_Code/apb_ram.sv:13
+# ** Note: (vopt-143) Recognized 1 FSM in module "apb_ram(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.apb_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.apb_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.apb_if(fast__2)
+# Loading work.apb_ram(fast)
+# Loading /home/shared_folder/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Note: (vsim-8900) Creating design debug database waveform/base_test.dbg.
+# log -r /*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+# UVM_INFO ../test/base_test.sv(15) @ 0: uvm_test_top [BASE_TEST] INSIDE BUILD PHASE
+# UVM_INFO ../env/base_env.sv(14) @ 0: uvm_test_top.e [BASE_ENV] INSIDE BUILD PHASE
+# UVM_INFO ../env/base_agent.sv(23) @ 0: uvm_test_top.e.a [BASE_AGENT] INSIDE BUILD PHASE
+# UVM_INFO ../env/base_driver.sv(13) @ 0: uvm_test_top.e.a.d [BASE_DRV] INSIDE BUILD PHASE
+# UVM_INFO ../env/base_monitor.sv(56) @ 0: uvm_test_top.e.a.m_r [BASE_MONR] INSIDE BUILD PHASE
+# UVM_INFO ../env/base_monitor.sv(15) @ 0: uvm_test_top.e.a.m_w [BASE_MONW] INSIDE RUN PHASE
+# UVM_INFO ../env/base_agent.sv(31) @ 0: uvm_test_top.e.a [BASE_AGENT] INSIDE CONNECT PHASE
+# UVM_INFO ../env/base_env.sv(21) @ 0: uvm_test_top.e [BASE_ENV] INSIDE CONNECT PHASE
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               base_test               -     @471 
+#   e                        base_env                -     @478 
+#     a                      base_agent              -     @489 
+#       d                    base_driver             -     @519 
+#         rsp_port           uvm_analysis_port       -     @534 
+#         seq_item_port      uvm_seq_item_pull_port  -     @526 
+#       m_r                  base_monitor_r          -     @512 
+#         send_r             uvm_analysis_port       -     @660 
+#       m_w                  base_monitor_w          -     @505 
+#         send_w             uvm_analysis_port       -     @673 
+#       seqr                 uvm_sequencer           -     @542 
+#         rsp_export         uvm_analysis_export     -     @549 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @643 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     sb                     base_scoreboard         -     @496 
+#       PR                   uvm_analysis_imp_R      -     @695 
+#       PW                   uvm_analysis_imp_W      -     @687 
+# --------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(339) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO ../test/base_test.sv(20) @ 0: uvm_test_top [BASE_TEST] INSIDE RUN PHASE
+# UVM_INFO ../env/base_monitor.sv(22) @ 0: uvm_test_top.e.a.m_w [BASE_MONW] INSIDE RUN PHASE
+# UVM_INFO ../env/base_monitor.sv(63) @ 0: uvm_test_top.e.a.m_r [BASE_MONR] INSIDE RUN PHASE
+# UVM_INFO ../env/base_driver.sv(74) @ 0: uvm_test_top.e.a.d [BASE_DRV] INSIDE RUN PHASE
+# UVM_INFO ../env/base_driver.sv(26) @ 0: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+# UVM_INFO ../env/base_driver.sv(26) @ 10: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+# UVM_INFO ../env/base_monitor.sv(68) @ 10: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 10: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 10: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_monitor.sv(27) @ 10: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 10: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 10: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(66) @ 10: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_scoreboard.sv(71) @ 10: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_monitor.sv(27) @ 20: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 20: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 20: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_monitor.sv(68) @ 20: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 20: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 20: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_driver.sv(26) @ 20: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+# UVM_INFO ../env/base_driver.sv(26) @ 30: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+# UVM_INFO ../env/base_monitor.sv(68) @ 30: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 30: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 2
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 30: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_monitor.sv(27) @ 30: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 30: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 2
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 30: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(66) @ 30: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_scoreboard.sv(71) @ 30: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 40: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           1, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(96) @ 40: uvm_test_top.e.sb [compare] UNMATCHED, PRDATA: xxxxxxxx but PWDATA: xxxxxxxx
+# UVM_ERROR ../env/base_scoreboard.sv(97) @ 40: uvm_test_top.e.sb [compare_error_status] error count
+# UVM_INFO ../env/base_monitor.sv(27) @ 40: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 40: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 40: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_monitor.sv(68) @ 40: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 40: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 40: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_driver.sv(26) @ 40: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+# UVM_INFO ../env/base_monitor.sv(68) @ 50: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 50: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 2
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 50: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_monitor.sv(27) @ 50: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 50: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 2
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 50: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0Xx      
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0X       
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     RESET      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(66) @ 50: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_scoreboard.sv(71) @ 50: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 60: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           1, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(96) @ 60: uvm_test_top.e.sb [compare] UNMATCHED, PRDATA: xxxxxxxx but PWDATA: xxxxxxxx
+# UVM_ERROR ../env/base_scoreboard.sv(97) @ 60: uvm_test_top.e.sb [compare_error_status] error count
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 90: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 90: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h435bd808 
+#   PADDR    integral        5     'h13       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 120: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 2
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 120: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'hf523fbfd 
+#   PADDR    integral        5     'h11       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 150: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 3
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 150: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h42e65b45 
+#   PADDR    integral        5     'h17       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 180: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 4
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 180: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h4d4c7266 
+#   PADDR    integral        5     'h15       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 210: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 5
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 210: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'ha76fa2b4 
+#   PADDR    integral        5     'ha        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 240: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 6
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 240: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h47a636d6 
+#   PADDR    integral        5     'h8        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 270: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 7
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 270: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'ha6b7d64a 
+#   PADDR    integral        5     'he        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 300: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 8
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 300: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'ha094049b 
+#   PADDR    integral        5     'hc        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 330: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 9
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 330: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'he7d5b49f 
+#   PADDR    integral        5     'h2        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 360: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 10
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 360: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h59d0c832 
+#   PADDR    integral        5     'h0        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 390: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 11
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 390: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'hbd4d13c4 
+#   PADDR    integral        5     'h6        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 420: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 12
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 420: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h1520cdb  
+#   PADDR    integral        5     'h4        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 450: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 13
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 450: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'had52af9d 
+#   PADDR    integral        5     'h1a       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 480: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 14
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 480: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'hea07ec8f 
+#   PADDR    integral        5     'h18       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(33) @ 510: uvm_test_top.e.sb [SCB_DEBUG] WRITE_Q: 15
+# UVM_INFO ../env/base_scoreboard.sv(38) @ 510: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @669       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h1c0eaa1a 
+#   PADDR    integral        5     'h1e       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h0xxxxxxxx
+#   op       operation_mode  2     WRITE      
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 540: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 540: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h13       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h435bd808 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 550: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          15, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 550: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 570: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 570: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h11       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'hf523fbfd 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 580: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          14, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 580: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 600: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 600: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h17       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h42e65b45 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 610: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          13, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 610: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 630: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 630: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h15       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h4d4c7266 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 640: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          12, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 640: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 660: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 660: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'ha        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'ha76fa2b4 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 670: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          11, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 670: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 690: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 690: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h8        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h47a636d6 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 700: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          10, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 700: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 720: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 720: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'he        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'ha6b7d64a 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 730: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           9, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 730: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 750: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 750: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'hc        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'ha094049b 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 760: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           8, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 760: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 780: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 780: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h2        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'he7d5b49f 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 790: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           7, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 790: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 810: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 810: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h0        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h59d0c832 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 820: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           6, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 820: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 840: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 840: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h6        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'hbd4d13c4 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 850: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           5, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 850: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 870: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 870: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h4        
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h1520cdb  
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 880: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           4, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 880: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 900: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 900: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h1a       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'had52af9d 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 910: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           3, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 910: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 930: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 930: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h18       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'hea07ec8f 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(80) @ 940: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           2, read_q:           1
+# UVM_INFO ../env/base_scoreboard.sv(93) @ 940: uvm_test_top.e.sb [compare] MATCHED
+# UVM_INFO ../env/base_scoreboard.sv(45) @ 960: uvm_test_top.e.sb [SCB_DEBUG] READ_Q: 1
+# UVM_INFO ../env/base_scoreboard.sv(49) @ 960: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+# --------------------------------------------
+# Name       Type            Size  Value      
+# --------------------------------------------
+# item       base_item       -     @656       
+#   PWRITE   integral        1     'h0X       
+#   PWDATA   integral        32    'h0xxxxxxxx
+#   PADDR    integral        5     'h1e       
+#   PREADY   integral        1     'h0X       
+#   PSLVERR  integral        1     'h0        
+#   PRDATA   integral        32    'h1c0eaa1a 
+#   op       operation_mode  2     READ       
+# --------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 960: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../env/base_scoreboard.sv(108) @ 960: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(109) @ 960: uvm_test_top.e.sb [base_scoreboard] ----       TEST FAIL COUNTS  2     ----
+# UVM_INFO ../env/base_scoreboard.sv(110) @ 960: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(114) @ 960: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+# UVM_INFO ../env/base_scoreboard.sv(115) @ 960: uvm_test_top.e.sb [base_scoreboard] ----       TEST PASS COUNTS  14     ----
+# UVM_INFO ../env/base_scoreboard.sv(116) @ 960: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  157
+# UVM_WARNING :    0
+# UVM_ERROR :    2
+# UVM_FATAL :    0
+# ** Report counts by id
+# [BASE_AGENT]     2
+# [BASE_DRV]     2
+# [BASE_ENV]     2
+# [BASE_MONR]     2
+# [BASE_MONW]     2
+# [BASE_TEST]     2
+# [QUEUE DEBUG]    16
+# [Questa UVM]     3
+# [RNTST]     1
+# [SB]     6
+# [SCB READ PORT]    20
+# [SCB WRITE PORT]    20
+# [SCB_DEBUG]    40
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [base_driver]     5
+# [base_monitor]    10
+# [base_scoreboard]     6
+# [compare]    16
+# [compare_error_status]     2
+# ** Note: $finish    : /home/shared_folder/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 960 ns  Iteration: 62  Instance: /testbench
+# End time: 11:23:11 on Sep 19,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 1
