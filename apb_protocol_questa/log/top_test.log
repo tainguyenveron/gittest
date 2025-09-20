@@ -1,0 +1,2217 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2-9_Full64; Runtime version O-2018.09-SP2-9_Full64;  Sep 19 16:18 2025
+
+Warning-[INV-RANDSEED-VAL] Invalid random seed value
+  Invalid random seed value passed through command line or environment 
+  variable. Seed value should be an integer. Using 1 as seed value
+
+UVM_INFO /home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test top_test...
+UVM_INFO base_test.sv(13) @ 0: uvm_test_top [build_phase] i2c_base_test BUILD-FLOW: Finishing...
+UVM_INFO /home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               top_test                -     @341 
+  e                        base_env                -     @354 
+    a                      base_agent              -     @371 
+      d                    base_driver             -     @409 
+        rsp_port           uvm_analysis_port       -     @428 
+        seq_item_port      uvm_seq_item_pull_port  -     @418 
+      m_r                  base_monitor_r          -     @400 
+        send_r             uvm_analysis_port       -     @584 
+      m_w                  base_monitor_w          -     @391 
+        send_w             uvm_analysis_port       -     @599 
+      seqr                 uvm_sequencer           -     @438 
+        rsp_export         uvm_analysis_export     -     @447 
+        seq_item_export    uvm_seq_item_pull_imp   -     @565 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     base_scoreboard         -     @380 
+      PR                   uvm_analysis_imp_R      -     @625 
+      PW                   uvm_analysis_imp_W      -     @615 
+--------------------------------------------------------------
+
+UVM_INFO base_driver.sv(25) @ 0: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_driver.sv(25) @ 10000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 10000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 10000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 10000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 10000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 10000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 10000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 10000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 10000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 20000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 20000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 20000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 20000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 20000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 20000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 20000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 20000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 20000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 30000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 30000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 30000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 30000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 30000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 30000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 30000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 30000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 30000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 40000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 40000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 40000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 40000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 40000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 40000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 40000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 40000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 40000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 50000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 50000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 50000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 50000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 50000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 50000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 50000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 50000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 50000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 60000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 60000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 60000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 60000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 60000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 60000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 60000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 60000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 60000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 70000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 70000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 70000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 70000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 70000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 70000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 70000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 70000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 70000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 80000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 80000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 80000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 80000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 80000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 80000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 80000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 80000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 80000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 90000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 90000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 90000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 90000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 90000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 90000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 90000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 90000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 90000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 100000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 100000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 100000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 100000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 100000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 100000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 100000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 100000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 100000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 110000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 110000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 110000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 110000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 110000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 110000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 110000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 110000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 110000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 120000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 120000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 120000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 120000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 120000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 120000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 120000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 120000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 120000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 130000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 130000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 130000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 130000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 130000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 130000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 130000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 130000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 130000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 140000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 140000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 140000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 140000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 140000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 140000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 140000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 140000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 140000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 150000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 150000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 150000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 150000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 150000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 150000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 150000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 150000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 150000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 160000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 160000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 160000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 160000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 160000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 160000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 160000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 160000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 160000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 170000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 170000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 170000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 170000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 170000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 170000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 170000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 170000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 170000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 180000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 180000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 180000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 180000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 180000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 180000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 180000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 180000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 180000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 190000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 190000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 190000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 190000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 190000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 190000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 190000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 190000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 190000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 200000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 200000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 200000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 200000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 200000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 200000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 200000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 200000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 200000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 210000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 210000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 210000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 210000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 210000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 210000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 210000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 210000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 210000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 220000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 220000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 220000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 220000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 220000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 220000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 220000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 220000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 220000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 230000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 230000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 230000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 230000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 230000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 230000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 230000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 230000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 230000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 240000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 240000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 240000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 240000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 240000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 240000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 240000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 240000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 240000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 250000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 250000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 250000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 250000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 250000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 250000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 250000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 250000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 250000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 260000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 260000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 260000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 260000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 260000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 260000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 260000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 260000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 260000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 270000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 270000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 270000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 270000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 270000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 270000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 270000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 270000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 270000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 280000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 280000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 280000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 280000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 280000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 280000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 280000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 280000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 280000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 290000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 290000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 290000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 290000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 290000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 290000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 290000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 290000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 290000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 300000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 300000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 300000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 300000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 300000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 300000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 300000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 300000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 300000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 310000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 310000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 310000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 310000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 310000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 310000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 310000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 310000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 310000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 320000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 320000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 320000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 320000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 320000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 320000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 320000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 320000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 320000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 330000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 330000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 330000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 330000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 330000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 330000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 330000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 330000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 330000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 340000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 340000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 340000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 340000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 340000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 340000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 340000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 340000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 340000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 350000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 350000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 350000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 350000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 350000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 350000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 350000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 350000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 350000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 360000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 360000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 360000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 360000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 360000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 360000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 360000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 360000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 360000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 370000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 370000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 370000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 370000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 370000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 370000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 370000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 370000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 370000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 380000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 380000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 380000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 380000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 380000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 380000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 380000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 380000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 380000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 390000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 390000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 390000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 390000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 390000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 390000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 390000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 390000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 390000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 400000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 400000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 400000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 400000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 400000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 400000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 400000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 400000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 400000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 410000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 410000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 410000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 410000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 410000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 410000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 410000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 410000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 410000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 420000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 420000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 420000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 420000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 420000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 420000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 420000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 420000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 420000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 430000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 430000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 430000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 430000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 430000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 430000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 430000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 430000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 430000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 440000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 440000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 440000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 440000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 440000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 440000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 440000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 440000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 440000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 450000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 450000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 450000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 450000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 450000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 450000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 450000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 450000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 450000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 460000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 460000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 460000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 460000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 460000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 460000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 460000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 460000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 460000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 470000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 470000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 470000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 470000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 470000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 470000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 470000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 470000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 470000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 480000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 480000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 480000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 480000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 480000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 480000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 480000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 480000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 480000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_driver.sv(25) @ 490000: uvm_test_top.e.a.d [base_driver] System Reset : Start of Simulation
+UVM_INFO base_monitor.sv(61) @ 490000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 490000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 490000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 490000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 490000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 490000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 490000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 490000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_monitor.sv(61) @ 500000: uvm_test_top.e.a.m_r [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(41) @ 500000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 500000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_monitor.sv(23) @ 500000: uvm_test_top.e.a.m_w [base_monitor] SYSTEM RESET DETECTED
+UVM_INFO base_scoreboard.sv(30) @ 500000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 500000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hXx      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'hX       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     RESET     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(63) @ 500000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(68) @ 500000: uvm_test_top.e.sb [SB] We are in RUN PHASE: We got RESET
+UVM_INFO base_scoreboard.sv(30) @ 540000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 1
+UVM_INFO base_scoreboard.sv(35) @ 540000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'haf501335
+  PADDR    integral        5     'h18      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 570000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 2
+UVM_INFO base_scoreboard.sv(35) @ 570000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hf80404a9
+  PADDR    integral        5     'h13      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 600000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 3
+UVM_INFO base_scoreboard.sv(35) @ 600000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hfcbfad0f
+  PADDR    integral        5     'h17      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 630000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 4
+UVM_INFO base_scoreboard.sv(35) @ 630000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h38a75476
+  PADDR    integral        5     'h5       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 660000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 5
+UVM_INFO base_scoreboard.sv(35) @ 660000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h2a2809bb
+  PADDR    integral        5     'h10      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 690000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 6
+UVM_INFO base_scoreboard.sv(35) @ 690000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h318560d8
+  PADDR    integral        5     'ha       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 720000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 7
+UVM_INFO base_scoreboard.sv(35) @ 720000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h200309dd
+  PADDR    integral        5     'h8       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 750000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 8
+UVM_INFO base_scoreboard.sv(35) @ 750000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hf9b20dd8
+  PADDR    integral        5     'h1b      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 780000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 9
+UVM_INFO base_scoreboard.sv(35) @ 780000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hbd582455
+  PADDR    integral        5     'hc       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 810000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 10
+UVM_INFO base_scoreboard.sv(35) @ 810000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h3c8d9cde
+  PADDR    integral        5     'h6       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 840000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 11
+UVM_INFO base_scoreboard.sv(35) @ 840000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h8378644a
+  PADDR    integral        5     'h0       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 870000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 12
+UVM_INFO base_scoreboard.sv(35) @ 870000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hbd286d15
+  PADDR    integral        5     'h16      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 900000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 13
+UVM_INFO base_scoreboard.sv(35) @ 900000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h101ed0b0
+  PADDR    integral        5     'h1f      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 930000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 14
+UVM_INFO base_scoreboard.sv(35) @ 930000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h4337d993
+  PADDR    integral        5     'h2       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(30) @ 960000: uvm_test_top.e.sb [SCB_DEBUG] Write_q: 15
+UVM_INFO base_scoreboard.sv(35) @ 960000: uvm_test_top.e.sb [SCB WRITE PORT] WRITE PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @595      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'h4f9ea6f1
+  PADDR    integral        5     'hd       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hxxxxxxxx
+  op       operation_mode  2     WRITE     
+-------------------------------------------
+UVM_INFO base_monitor.sv(65) @ 970000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 990000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 990000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h18      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'haf501335
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1000000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          15, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1000000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1000000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1020000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1020000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h13      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hf80404a9
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1030000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          14, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1030000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1030000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1050000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1050000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h17      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hfcbfad0f
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1060000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          13, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1060000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1060000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1080000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1080000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h5       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h38a75476
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1090000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          12, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1090000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1090000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1110000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1110000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h10      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h2a2809bb
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1120000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          11, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1120000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1120000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1140000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1140000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'ha       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h318560d8
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1150000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:          10, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1150000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1150000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1170000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1170000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h8       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h200309dd
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1180000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           9, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1180000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1180000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1200000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1200000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h1b      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hf9b20dd8
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1210000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           8, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1210000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1210000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1230000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1230000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hc       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hbd582455
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1240000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           7, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1240000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1240000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1260000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1260000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h6       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h3c8d9cde
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1270000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           6, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1270000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1270000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1290000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1290000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h0       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h8378644a
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1300000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           5, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1300000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1300000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1320000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1320000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h16      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'hbd286d15
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1330000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           4, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1330000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1330000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1350000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1350000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h1f      
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h101ed0b0
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1360000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           3, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1360000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1360000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1380000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1380000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'h2       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h4337d993
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO base_scoreboard.sv(76) @ 1390000: uvm_test_top.e.sb [QUEUE DEBUG] write_q:           2, read_q:           1
+UVM_INFO base_scoreboard.sv(89) @ 1390000: uvm_test_top.e.sb [compare] MATCHED
+UVM_INFO base_monitor.sv(65) @ 1390000: uvm_test_top.e.a.m_r [base_monitor] time
+UVM_INFO base_scoreboard.sv(41) @ 1410000: uvm_test_top.e.sb [SCB_DEBUG] Read_q: 1
+UVM_INFO base_scoreboard.sv(46) @ 1410000: uvm_test_top.e.sb [SCB READ PORT] READ PKT
+-------------------------------------------
+Name       Type            Size  Value     
+-------------------------------------------
+item       base_item       -     @580      
+  PWRITE   integral        1     'hX       
+  PWDATA   integral        32    'hxxxxxxxx
+  PADDR    integral        5     'hd       
+  PREADY   integral        1     'hX       
+  PSLVERR  integral        1     'h0       
+  PRDATA   integral        32    'h4f9ea6f1
+  op       operation_mode  2     READ      
+-------------------------------------------
+UVM_INFO /home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 1410000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO base_scoreboard.sv(110) @ 1410000: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+UVM_INFO base_scoreboard.sv(111) @ 1410000: uvm_test_top.e.sb [base_scoreboard] ----       TEST PASS COUNTS  14     ----
+UVM_INFO base_scoreboard.sv(112) @ 1410000: uvm_test_top.e.sb [base_scoreboard] ---------------------------------------
+UVM_INFO /home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1410000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 1410000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  562
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[QUEUE DEBUG]    14
+[RNTST]     1
+[SB]   100
+[SCB READ PORT]    65
+[SCB WRITE PORT]    65
+[SCB_DEBUG]   130
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[base_driver]    50
+[base_monitor]   115
+[base_scoreboard]     3
+[build_phase]     1
+[compare]    14
+
+$finish called from file "/home/eda/synopsys/vcs/O-2018.09-SP2-9/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              1410000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1410000 ps
+CPU Time:      1.200 seconds;       Data structure size:   0.5Mb
+Fri Sep 19 16:18:07 2025
