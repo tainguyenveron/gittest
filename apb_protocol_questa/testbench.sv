@@ -56,10 +56,5 @@ apb_ram dut (.pclk(vif.pclk),
 		uvm_config_db#(virtual apb_if)::set(null,"*","vif",vif);
 		run_test();
 	end
-	
-	initial begin
-		$dumpfile("dump.fsdb");
-		$dumpvars;
-	end
 
 endmodule: top

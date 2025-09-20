@@ -1,1 +1,0 @@
-  CREATE_STREAM @0 {NAME:wrb T:Transactions SCOPE:uvm_test_top.e.a.seqr STREAM:651}

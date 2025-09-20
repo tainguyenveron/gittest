@@ -15,7 +15,7 @@ class base_driver extends uvm_driver #(base_item);
 	endfunction
 	
 	task reset_dut();
-		repeat(50) begin
+		repeat(5) begin
 		vif.presetn <= 1'b0;
 		vif.paddr   <= 'h0;
 		vif.pwdata  <= 'h0;
