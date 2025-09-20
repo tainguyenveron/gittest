@@ -1,0 +1,281 @@
+# vsim -c "+UVM_VERBOSITY=UVM_HIGH" -voptargs="+acc" -assertdebug -debugDB -l log/onehot_test.log testbench -wlf waveform/onehot_test.wlf -do "log -r /*; run -all; quit" "+UVM_TESTNAME=onehot_test" 
+# Start time: 17:37:23 on Sep 08,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.apb_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.apb_m_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.apb_if(fast__2)
+# Loading work.interrupt_top(fast)
+# Loading work.enable_write(fast)
+# Loading work.interrupt_registers(fast)
+# Loading work.out_reg(fast)
+# Loading work.apb_slave(fast)
+# Loading work.parity_check_ODD(fast)
+# Loading work.parity_check_ODD(fast__1)
+# Loading work.IRQn_input_unit(fast)
+# Loading work.IRQ_function(fast)
+# Loading work.negedge_detector(fast)
+# Loading work.posedge_detector(fast)
+# Loading work.low_level_detector(fast)
+# Loading work.clear_irq_block(fast)
+# Loading work.NMI_input_unit(fast)
+# Loading work.priority_determination(fast)
+# Loading work.max_priority_block(fast)
+# Loading work.comparator_greater(fast)
+# Loading work.max_comparator_block(fast)
+# Loading work.select_mode(fast)
+# Loading work.priority_default_block(fast)
+# Loading work.interrupt_request_output(fast)
+# Loading work.encoder_256_8(fast)
+# Loading work.mux_256_1(fast)
+# Loading /home/shared_folder/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Note: (vsim-8900) Creating design debug database waveform/onehot_test.dbg.
+# log -r /*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# Clock generation started at time 0
+# Clock initialized to 0 at time 0
+# Testbench: Starting UVM test at time 0
+# UVM_INFO ../tests/base_test.sv(11) @ 0: uvm_test_top [TEST] Constructor
+# UVM_INFO @ 0: reporter [RNTST] Running test onehot_test...
+# UVM_INFO ../tests/base_test.sv(18) @ 0: uvm_test_top [TEST] BUILD PHASE
+# UVM_INFO ../model/Environment/system_env.sv(11) @ 0: uvm_test_top.env [ENV] Constructor
+# UVM_INFO ../tests/base_test.sv(25) @ 0: uvm_test_top [TEST] CONFIGURATION
+# --------------------------------------------------------
+# Name           Type                     Size  Value     
+# --------------------------------------------------------
+# e_cfg          <unknown>                -     @487      
+#   cfg          <unknown>                -     @488      
+#     is_active  uvm_active_passive_enum  1     UVM_ACTIVE
+#   has_scb      integral                 1     'h1       
+# --------------------------------------------------------
+# UVM_INFO ../tests/base_test.sv(33) @ 0: uvm_test_top [TEST] GOT VIF
+# UVM_INFO ../tests/base_test.sv(36) @ 0: uvm_test_top [TEST] PASSING CFG & VIF to ENV
+# UVM_INFO ../tests/onehot_test.sv(13) @ 0: uvm_test_top [onehot_test] Building one-hot test
+# UVM_INFO ../model/Environment/system_env.sv(16) @ 0: uvm_test_top.env [ENV] BUILD PHASE
+# UVM_INFO ../model/Environment/apb_m_agent.sv(14) @ 0: uvm_test_top.env.agent [AGNT] Constructor
+# UVM_INFO ../model/Environment/system_env.sv(24) @ 0: uvm_test_top.env [ENV] GOT VIG
+# UVM_INFO ../model/Environment/system_env.sv(31) @ 0: uvm_test_top.env [ENV] GOT ENV_CFG
+# UVM_INFO ../model/Environment/system_env.sv(34) @ 0: uvm_test_top.env [ENV] PASSING CFG & VIF to AGNT
+# UVM_INFO ../model/Environment/system_env.sv(40) @ 0: uvm_test_top.env [ENV] SCB ENABLED
+# UVM_INFO ../model/Environment/scoreboard.sv(10) @ 0: uvm_test_top.env.scb [apb_scoreboard] Constructor
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(9) @ 0: uvm_test_top.env.agent.monitor [MON] Constructor
+# UVM_INFO ../model/Environment/apb_m_agent.sv(29) @ 0: uvm_test_top.env.agent [AGNT] GOT AGENT CFG
+# UVM_INFO ../model/Environment/apb_m_agent.sv(38) @ 0: uvm_test_top.env.agent [AGNT] UVM_ACTIVE
+# UVM_INFO ../model/Environment/apb_m_driver.sv(9) @ 0: uvm_test_top.env.agent.driver [DRV] Constructor
+# UVM_INFO ../model/Environment/apb_m_sequencer.sv(7) @ 0: uvm_test_top.env.agent.sequencer [apb_m_sequencer] Constructor
+# UVM_INFO ../model/Environment/apb_m_agent.sv(50) @ 0: uvm_test_top.env.agent [AGNT] GOT VIF
+# UVM_INFO ../model/Environment/apb_m_agent.sv(57) @ 0: uvm_test_top.env.agent [AGNT] BUILD PHASE
+# UVM_INFO ../model/Environment/apb_m_driver.sv(14) @ 0: uvm_test_top.env.agent.driver [DRV] BUILD PHASE
+# UVM_INFO ../model/Environment/apb_m_driver.sv(21) @ 0: uvm_test_top.env.agent.driver [DRV] GOT VIF
+# UVM_INFO ../model/Environment/apb_m_driver.sv(27) @ 0: uvm_test_top.env.agent.driver [DRV] GET AGENT CFG
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(15) @ 0: uvm_test_top.env.agent.monitor [MON] BUILD PHASE
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(22) @ 0: uvm_test_top.env.agent.monitor [MON] GOT VIF
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(27) @ 0: uvm_test_top.env.agent.monitor [MON] GET AGENT CFG
+# UVM_INFO ../model/Environment/apb_m_sequencer.sv(13) @ 0: uvm_test_top.env.agent.sequencer [apb_m_sequencer] Build phase
+# UVM_INFO ../model/Environment/scoreboard.sv(16) @ 0: uvm_test_top.env.scb [apb_scoreboard] Build phase
+# UVM_INFO ../model/Environment/apb_m_agent.sv(62) @ 0: uvm_test_top.env.agent [apb_m_agent] Connect phase
+# UVM_INFO ../model/Environment/apb_m_agent.sv(65) @ 0: uvm_test_top.env.agent [AGENT] CONNECT DRIVE & SEQR
+# UVM_INFO ../model/Environment/system_env.sv(49) @ 0: uvm_test_top.env [ENV] Connect phase
+# UVM_INFO ../model/Environment/system_env.sv(51) @ 0: uvm_test_top.env [ENV] CONNECT MON & SCB PORT
+# UVM_INFO ../tests/base_test.sv(43) @ 0: uvm_test_top [TEST] topology
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               onehot_test             -     @473 
+#   env                      apb_m_env               -     @480 
+#     agent                  apb_m_agent             -     @496 
+#       driver               apb_m_driver            -     @543 
+#         rsp_port           uvm_analysis_port       -     @558 
+#         seq_item_port      uvm_seq_item_pull_port  -     @550 
+#       monitor              apb_m_monitor           -     @527 
+#         collected_port     uvm_analysis_port       -     @534 
+#       sequencer            apb_m_sequencer         -     @566 
+#         rsp_export         uvm_analysis_export     -     @573 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @667 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     scb                    apb_scoreboard          -     @511 
+#       analysis_port        uvm_analysis_imp        -     @518 
+# --------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(339) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO ../tests/onehot_test.sv(21) @ 0: uvm_test_top [onehot_test] === Starting One-Hot Test ===
+# UVM_INFO ../tests/onehot_test.sv(30) @ 0: uvm_test_top [onehot_test] Starting one-hot sequence execution
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(35) @ 0: uvm_test_top.env.agent.monitor [apb_m_monitor] Run phase
+# UVM_INFO ../model/Environment/apb_m_driver.sv(35) @ 0: uvm_test_top.env.agent.driver [apb_m_driver] Run phase
+# Waiting for transaction...
+# UVM_INFO ../seq/onehot_seq.sv(13) @ 0: uvm_test_top.env.agent.sequencer@@onehot_sequence [onehot_seq] === Starting One-Hot Sequence Test ===
+# UVM_INFO ../seq/base_seq.sv(18) @ 0: uvm_test_top.env.agent.sequencer@@onehot_sequence [onehot_seq] Sending reset transaction
+# Starting reset transaction...
+# Driving reset transaction - PRESETn = 0
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(44) @ 5000: uvm_test_top.env.agent.monitor [apb_m_monitor] Reset transaction detected
+# UVM_INFO ../model/Environment/scoreboard.sv(21) @ 5000: uvm_test_top.env.scb [apb_scoreboard] RESET DETECTED
+# Reset released - PRESETn = 1
+# UVM_INFO ../model/Environment/apb_m_driver.sv(68) @ 25000: uvm_test_top.env.agent.driver [apb_m_driver] Reset transaction driven
+# Waiting for transaction...
+# UVM_INFO ../seq/base_seq.sv(21) @ 25000: uvm_test_top.env.agent.sequencer@@onehot_sequence [onehot_seq] Reset transaction sent
+# UVM_INFO ../seq/base_seq.sv(18) @ 25000: uvm_test_top.env.agent.sequencer@@onehot_sequence [onehot_seq] Sending reset transaction
+# Starting reset transaction...
+# Driving reset transaction - PRESETn = 0
+# Reset released - PRESETn = 1
+# UVM_INFO ../model/Environment/apb_m_driver.sv(68) @ 55000: uvm_test_top.env.agent.driver [apb_m_driver] Reset transaction driven
+# Waiting for transaction...
+# UVM_INFO ../seq/base_seq.sv(21) @ 55000: uvm_test_top.env.agent.sequencer@@onehot_sequence [onehot_seq] Reset transaction sent
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 85000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090000, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 85000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090000, data=0x00000000, read_count:1
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 115000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090004, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 115000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090004, data=0x00000000, read_count:2
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 145000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090008, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 145000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090008, data=0x00000000, read_count:3
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 175000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x0009000c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 175000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009000c, data=0x00000000, read_count:4
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 205000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090010, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 205000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090010, data=0x00000000, read_count:5
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 235000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090014, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 235000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090014, data=0x00000000, read_count:6
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 265000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090018, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 265000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090018, data=0x00000000, read_count:7
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 295000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x0009001c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 295000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009001c, data=0x00000000, read_count:8
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 325000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090020, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 325000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090020, data=0x00000000, read_count:9
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 355000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090024, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 355000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090024, data=0x00000000, read_count:10
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 385000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090028, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 385000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090028, data=0x00000000, read_count:11
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 415000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x0009002c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 415000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009002c, data=0x00000000, read_count:12
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 445000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090030, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 445000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090030, data=0x00000000, read_count:13
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 475000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090034, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 475000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090034, data=0x00000000, read_count:14
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 505000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090038, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 505000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090038, data=0x00000000, read_count:15
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 535000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x0009003c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 535000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009003c, data=0x00000000, read_count:16
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 565000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090040, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 565000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090040, data=0x00000000, read_count:17
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 595000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090044, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 595000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090044, data=0x00000000, read_count:18
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 625000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x00090048, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 625000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090048, data=0x00000000, read_count:19
+# Waiting for transaction...
+# UVM_INFO ../model/Environment/apb_m_monitor.sv(76) @ 655000: uvm_test_top.env.agent.monitor [apb_m_monitor] Read transaction captured: addr=0x0009004c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(34) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009004c, data=0x00000000, read_count:20
+# UVM_INFO ../model/Environment/scoreboard.sv(45) @ 655000: uvm_test_top.env.scb [SCB] read size: 20, write size: 0
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090000, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090004, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090008, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009000c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090010, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090014, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090018, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009001c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090020, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090024, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090028, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009002c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090030, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090034, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090038, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009003c, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090040, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090044, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x00090048, data=0x00000000
+# UVM_INFO ../model/Environment/scoreboard.sv(48) @ 655000: uvm_test_top.env.scb [apb_scoreboard] addr=0x0009004c, data=0x00000000
+# UVM_INFO ../tests/onehot_test.sv(32) @ 655000: uvm_test_top [onehot_test] One-hot sequence execution completed
+# UVM_INFO ../tests/onehot_test.sv(36) @ 1655000: uvm_test_top [onehot_test] === One-Hot Test Completed ===
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1655000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../model/Environment/scoreboard.sv(55) @ 1655000: uvm_test_top.env.scb [apb_scoreboard] === SCOREBOARD SUMMARY ===
+# UVM_INFO ../model/Environment/scoreboard.sv(56) @ 1655000: uvm_test_top.env.scb [apb_scoreboard] Total Writes: 0
+# UVM_INFO ../model/Environment/scoreboard.sv(57) @ 1655000: uvm_test_top.env.scb [apb_scoreboard] Total Reads: 20
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  118
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [AGENT]     1
+# [AGNT]     5
+# [DRV]     4
+# [ENV]     8
+# [MON]     4
+# [Questa UVM]     3
+# [RNTST]     1
+# [SCB]     1
+# [TEST]     6
+# [TEST_DONE]     1
+# [apb_m_agent]     1
+# [apb_m_driver]     3
+# [apb_m_monitor]    22
+# [apb_m_sequencer]     2
+# [apb_scoreboard]    46
+# [onehot_seq]     5
+# [onehot_test]     5
+# ** Note: $finish    : /home/shared_folder/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1655 ns  Iteration: 54  Instance: /testbench
+# End time: 17:37:30 on Sep 08,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0

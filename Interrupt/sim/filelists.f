@@ -1,0 +1,10 @@
++incdir+../env
++incdir+../model/Environment
++incdir+../model/Master
++incdir+../seq
++incdir+../tests
+#+incdir+../../ip
+../env/apb_m_pkg.sv
+../env/testbench.sv
+#../../ip/*.sv
+../RTL_Code/*.sv
