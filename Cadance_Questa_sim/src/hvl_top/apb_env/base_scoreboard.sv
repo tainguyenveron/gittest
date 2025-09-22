@@ -1,0 +1,122 @@
+`uvm_analysis_imp_decl(_W)
+`uvm_analysis_imp_decl(_R)
+
+class base_scoreboard extends uvm_scoreboard;
+  `uvm_component_utils(base_scoreboard)
+
+  // Analysis implementation ports for write/read channels
+  uvm_analysis_imp_W #(base_item, base_scoreboard) PW;
+  uvm_analysis_imp_R #(base_item, base_scoreboard) PR;
+
+  // Queues for transactions coming from write/read monitors
+  base_item read_q[$], write_q[$], item_w, item_r;
+
+  // Virtual interface to access DUT clock
+  virtual apb_if vif;
+
+  // Pass/Fail counters for comparison results
+  int compare_pass = 0, compare_fail = 0;
+
+  function new(string name = "base_scoreboard", uvm_component parent = null);
+    super.new(name, parent);
+  endfunction
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    PW = new("PW", this);
+    PR = new("PR", this);
+    if(!uvm_config_db#(virtual apb_if)::get(this,"","vif",vif))
+      `uvm_error("base_scoreboard","Unable to access interface!");
+  endfunction
+
+  //--- WRITE PORT ---
+  // Called by the write monitor; pushes valid items into write_q.
+  // If RESET or PSLVERR is received, clear/skip queue instead.
+  virtual function void write_W(base_item item);
+    // When RESET is received, clear write queue and skip pushing.
+    if(item.op == RESET) begin
+      `uvm_info("SCB WRITE PORT","RESET received => clear write_q",UVM_LOW)
+      write_q.delete();
+      return;
+    end
+    // When PSLVERR is received, skip pushing.
+    if(item.PSLVERR) begin
+      `uvm_error("SCB WRITE PORT","PSLVERR received => skip pkt")
+	    return;
+    end
+    // Normal case: push cloned transaction into queue.
+    write_q.push_back(base_item'(item.clone()));
+    `uvm_info("SCB_DEBUG",$sformatf("Write_q: %0d",write_q.size()),UVM_LOW)
+    `uvm_info("SCB WRITE PORT","WRITE PKT",UVM_LOW)
+    item.print();
+  endfunction
+
+  //--- READ PORT ---
+  // Called by the read monitor; pushes valid items into read_q.
+  // If RESET or PSLVERR is received, clear/skip queue instead.
+  virtual function void write_R(base_item item);
+    if(item.op == RESET) begin
+      `uvm_info("SCB READ PORT","RESET received => clear read_q",UVM_LOW)
+      read_q.delete();
+      return;
+    end
+    if(item.PSLVERR) begin
+      `uvm_error("SCB READ PORT","PSLVERR received => skip pkt")
+	    return;
+    end
+    read_q.push_back(item);
+    `uvm_info("SCB_DEBUG",$sformatf("Read_q: %0d",read_q.size()),UVM_LOW)
+    `uvm_info("SCB READ PORT","READ PKT",UVM_LOW)
+    item.print();
+  endfunction
+
+  //--- RUN PHASE ---
+  // Periodically checks queues and compares matching write/read items.
+  task run_phase(uvm_phase phase);
+    forever begin
+      @(posedge vif.pclk);
+      if(write_q.size() > 0 && read_q.size() > 0) begin
+        `uvm_info("QUEUE DEBUG",
+          $sformatf("write_q: %d, read_q: %d",write_q.size(),read_q.size()),UVM_LOW)
+        item_w = write_q.pop_front();
+        item_r = read_q.pop_front();
+        compare();
+      end
+    end
+  endtask
+
+  //--- COMPARE ---
+  // Compares the PRDATA from read item with the PWDATA from write item.
+  virtual function void compare();
+    if(item_r.PRDATA == item_w.PWDATA) begin
+      `uvm_info("compare","MATCHED", UVM_LOW);
+      compare_pass++;
+    end
+    else begin
+      `uvm_info("compare",
+        $sformatf("UNMATCHED, PRDATA: %h but PWDATA: %h",
+        item_r.PRDATA,item_w.PWDATA), UVM_LOW);
+      `uvm_error("compare_error_status","error count")
+      compare_fail++;
+    end
+  endfunction
+
+  //--- REPORT PHASE ---
+  // Reports the total pass/fail counts at the end of the test.
+  function void report_phase(uvm_phase phase);
+    super.report_phase(phase);
+    if(compare_fail>0) begin
+      `uvm_info(get_type_name(), "---------------------------------------", UVM_NONE)
+      `uvm_info(get_type_name(),
+        $sformatf("----       TEST FAIL COUNTS  %0d     ----",compare_fail), UVM_NONE)
+      `uvm_info(get_type_name(), "---------------------------------------", UVM_NONE)
+    end
+    if(compare_pass>0) begin
+      `uvm_info(get_type_name(), "---------------------------------------", UVM_NONE)
+      `uvm_info(get_type_name(),
+        $sformatf("----       TEST PASS COUNTS  %0d     ----",compare_pass), UVM_NONE)
+      `uvm_info(get_type_name(), "---------------------------------------", UVM_NONE)
+    end
+  endfunction : report_phase  
+
+endclass
