@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-c
+-timescale
+1ns/1ps
+-elaborate
+-access
++rwc
+-sv
+-uvm
++access+rw
+-f
+../filelist.f
+-access
++r
++vcd
+-coverage
+all
+-sva

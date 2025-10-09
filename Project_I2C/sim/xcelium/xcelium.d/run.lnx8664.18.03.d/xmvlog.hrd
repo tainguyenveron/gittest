@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-INCDIR
+../../env/I2C_VIP
+-INCDIR
+../../env/APB_VIP
+-INCDIR
+../../sequence_files
+-INCDIR
+../../test
+-INCDIR
+../../rtl
+-I_INCDIR
+/home/shared_folder/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/home/shared_folder/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.1d/additions/sv

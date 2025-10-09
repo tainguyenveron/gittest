@@ -1,0 +1,221 @@
+xrun(64): 18.03-s001: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	18.03-s001: Started on Oct 09, 2025 at 18:10:07 +07
+xrun
+	-c
+	-timescale 1ns/1ps
+	-elaborate
+	-access +rwc
+	-64
+	-sv
+	-uvm
+	+access+rw
+	-f ../filelist.f
+		+incdir+../../env/I2C_VIP
+		+incdir+../../env/APB_VIP
+		+incdir+../../sequence_files
+		+incdir+../../test
+		+incdir+../../rtl
+		../../env/APB_VIP/apb_pkg.sv
+		../../env/I2C_VIP/i2c_pkg.sv
+		../../rtl/design.sv
+		../../env/testbench.sv
+	-access +r
+	+vcd
+	-coverage all
+	-sva
+
+   User defined plus("+") options:
+	+vcd
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /home/shared_folder/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.1d
+file: ../../env/APB_VIP/apb_pkg.sv
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 0
+file: ../../env/I2C_VIP/i2c_pkg.sv
+	package worklib.i2c_pkg:sv
+		errors: 0, warnings: 0
+file: ../../rtl/design.sv
+	module worklib.apb_ram:sv
+		errors: 0, warnings: 0
+file: ../../env/testbench.sv
+	interface worklib.i2c_if:sv
+		errors: 0, warnings: 0
+	interface worklib.apb_if:sv
+		errors: 0, warnings: 0
+	module worklib.top:sv
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory ../../rtl given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		apb_pkg
+		i2c_pkg
+		$unit_0x2aea8784
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.apb_ram
+			FSM extracted for state register state
+		worklib.top
+	Total FSMs extracted = 1
+	Building instance overlay tables: ....................
+xmelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+ Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.apb_ram:sv <0x60379fb1>
+			streams:   8, words:  7150
+		worklib.uvm_pkg:sv <0x5e1e6f25>
+			streams:   8, words:  8278
+		worklib.uvm_pkg:sv <0x3458de8c>
+			streams:   8, words:  7903
+		worklib.uvm_pkg:sv <0x15ec8621>
+			streams:   7, words:  7262
+		worklib.uvm_pkg:sv <0x1784da02>
+			streams:   7, words:  1844
+		worklib.uvm_pkg:sv <0x5f13ae9d>
+			streams:   9, words:  3380
+		worklib.uvm_pkg:sv <0x3ba3a80b>
+			streams:  22, words: 60149
+		worklib.uvm_pkg:sv <0x7ab730c9>
+			streams:   7, words:  1844
+		worklib.uvm_pkg:sv <0x46a61f85>
+			streams:  28, words: 31431
+		worklib.uvm_pkg:sv <0x67753c9c>
+			streams:  27, words: 29748
+		worklib.uvm_pkg:sv <0x0658ba6d>
+			streams:  23, words: 28205
+		worklib.uvm_pkg:sv <0x75724866>
+			streams:  17, words: 15680
+		worklib.uvm_pkg:sv <0x52590b92>
+			streams:  26, words: 39262
+		worklib.uvm_pkg:sv <0x2ae5cb7a>
+			streams:   7, words:  2348
+		worklib.uvm_pkg:sv <0x773f66fa>
+			streams:  16, words: 20726
+		worklib.uvm_pkg:sv <0x7e43de78>
+			streams:  26, words: 35468
+		worklib.uvm_pkg:sv <0x65bc399f>
+			streams:  25, words: 62470
+		worklib.uvm_pkg:sv <0x1adeb9f8>
+			streams:  27, words: 39214
+		worklib.uvm_pkg:sv <0x158b7efc>
+			streams:  26, words: 55266
+		worklib.uvm_pkg:sv <0x7f926827>
+			streams:  27, words: 42432
+		worklib.uvm_pkg:sv <0x0f5cc1c6>
+			streams:  25, words: 61376
+		worklib.uvm_pkg:sv <0x5414cc14>
+			streams:  27, words: 44644
+		worklib.uvm_pkg:sv <0x1ddc0269>
+			streams:  25, words: 67171
+		worklib.uvm_pkg:sv <0x42738bf7>
+			streams:  27, words: 50238
+		worklib.uvm_pkg:sv <0x6f992b97>
+			streams:  25, words: 59848
+		worklib.uvm_pkg:sv <0x6ffad5c6>
+			streams:  25, words: 62780
+		worklib.uvm_pkg:sv <0x2a01b957>
+			streams:  27, words: 41408
+		worklib.uvm_pkg:sv <0x35b293c9>
+			streams:  25, words: 59061
+		worklib.uvm_pkg:sv <0x0967afa5>
+			streams:  29, words: 106021
+		worklib.uvm_pkg:sv <0x26a17d6a>
+			streams:  71, words: 140748
+		worklib.cdns_uvm_pkg:sv <0x043fbf4c>
+			streams:  28, words: 39360
+		worklib.cdns_uvm_pkg:sv <0x0beed1f5>
+			streams:   9, words:  5179
+		worklib.cdns_uvm_pkg:sv <0x633dc8fd>
+			streams:  10, words:  9339
+		worklib.uvm_pkg:sv <0x4f9fa5a9>
+			streams:  24, words: 25205
+		worklib.uvm_pkg:sv <0x71e4f16e>
+			streams:  24, words: 25205
+		worklib.uvm_pkg:sv <0x3cef27e2>
+			streams:  24, words: 24420
+		worklib.uvm_pkg:sv <0x7db2bef3>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x68f88a14>
+			streams:  24, words: 30092
+		worklib.uvm_pkg:sv <0x109b921f>
+			streams:  24, words: 27779
+		worklib.uvm_pkg:sv <0x29e7576f>
+			streams:  23, words: 27582
+		worklib.uvm_pkg:sv <0x406fd03a>
+			streams: 176, words: 200096
+		worklib.uvm_pkg:sv <0x531dd31f>
+			streams:  24, words: 26808
+		worklib.uvm_pkg:sv <0x336eeb59>
+			streams:   9, words:  5110
+		worklib.uvm_pkg:sv <0x06d6ceba>
+			streams: 176, words: 200096
+		worklib.uvm_pkg:sv <0x3cd417cc>
+			streams:  23, words: 27582
+		worklib.uvm_pkg:sv <0x194a3d32>
+			streams:  23, words: 27582
+		worklib.uvm_pkg:sv <0x017ad91e>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x1b989adb>
+			streams:  31, words: 27880
+		worklib.uvm_pkg:sv <0x0a91136c>
+			streams: 180, words: 285282
+		worklib.uvm_pkg:sv <0x3a27c5a7>
+			streams:  24, words: 48715
+		worklib.apb_pkg:sv <0x378bb6f5>
+			streams:  39, words: 31892
+		worklib.uvm_pkg:sv <0x112ba579>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x320dc13a>
+			streams: 181, words: 285585
+		worklib.uvm_pkg:sv <0x57d5be21>
+			streams:  24, words: 58007
+		worklib.top:sv <0x790327b0>
+			streams: 148, words: 248297
+		worklib.i2c_pkg:sv <0x5e1fce07>
+			streams:   0, words:     0
+		worklib.apb_pkg:sv <0x291fde9b>
+			streams:   0, words:     0
+		worklib.cdns_uvm_pkg:sv <0x62750484>
+			streams: 136, words: 286539
+		worklib.cdns_uvmapi:svp <0x11783ca0>
+			streams:  27, words: 37264
+		worklib.cdns_assert2uvm_pkg:sv <0x273b8f40>
+			streams:   3, words:  2525
+		worklib.uvm_pkg:sv <0x177408f2>
+			streams: 4718, words: 9326727
+  reg [31:0] mem [32];
+               |
+xmelab: *W,COVMDD (/home/veron17/Desktop/Project_I2C/rtl/design.sv,14|15): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+xmelab: *W,COVNOEN: By default, toggle coverage is not supported for systemverilog enumerated nets and variables. To enable toggle coverage of these objects, specify the 'set_toggle_scoring -sv_enum' command in the coverage configuration file.
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    2       2
+		Verilog packages:              6       6
+		Registers:                 14927   10324
+		Scalar wires:                 11       -
+		Vectored wires:                4       -
+		Named events:                  4      12
+		Always blocks:                 1       1
+		Initial blocks:              314     164
+		Parallel blocks:              26      27
+		Pseudo assignments:           10      10
+		Assertions:                    2       2
+		Compilation units:             1       1
+		SV Class declarations:       208     322
+		SV Class specializations:    422     422
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.top:sv
+TOOL:	xrun(64)	18.03-s001: Exiting on Oct 09, 2025 at 18:10:12 +07  (total: 00:00:05)
